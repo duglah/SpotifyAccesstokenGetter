@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+
+    <title>SpotifyAccesstokenGetter</title>
+    <script type="text/javascript">
+        function setBtnCallbacks() {
+            $('#btn_access_token').click(function () {
+                $('#input_access_token').select();
+                document.execCommand("copy");
+            });
+
+            $('#btn_token_type').click(function () {
+                $('#input_token_type').select();
+                document.execCommand("copy");
+            });
+
+            $('#btn_scope').click(function () {
+                $('#input_scope').select();
+                document.execCommand("copy");
+            });
+
+            $('#btn_expires_in').click(function () {
+                $('#input_expires_in').select();
+                document.execCommand("copy");
+            });
+
+            $('#btn_refresh_token').click(function () {
+                $('#input_refresh_token').select();
+                document.execCommand("copy");
+            });
+
+            $('#btn_error').click(function () {
+                $('#input_error').select();
+                document.execCommand("copy");
+            });
+
+            $('#btn_devices').click(function () {
+                $('#input_devices').select();
+                document.execCommand("copy");
+            });
+        }
+    </script>
+</head>
+
+<body onload="setBtnCallbacks()">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-md-6">
+                <label for="input_access_token">Access Token:</label>
+                <div class="input-group mb-3">
+                    <input value="{ACCESS_TOKEN}" id="input_access_token" type="text" class="form-control" placeholder="Access token" aria-label="Access token"
+                        aria-describedby="btn_access_token">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="btn_access_token">Copy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col-md-6">
+                <label for="input_token_type">Token Type:</label>
+                <div class="input-group mb-3">
+                    <input value="{TOKEN_TYPE}" id="input_token_type" type="text" class="form-control" placeholder="Token type" aria-label="Token type"
+                        aria-describedby="btn_token_type">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="btn_token_type">Copy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col-md-6">
+                <label for="input_scope">Scope:</label>
+                <div class="input-group mb-3">
+                    <input value="{SCOPE}" id="input_scope" type="text" class="form-control" placeholder="Scope" aria-label="Scope" aria-describedby="btn_scope">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="btn_scope">Copy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col-md-6">
+                <label for="input_expires_in">Expires in:</label>
+                <div class="input-group mb-3">
+                    <input value="{EXPIRES_IN}" id="input_expires_in" type="text" class="form-control" placeholder="Expires in" aria-label="Expires in"
+                        aria-describedby="btn_expires_in">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="btn_expires_in">Copy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col-md-6">
+                <label for="input_refresh_token">Refresh roken:</label>
+                <div class="input-group mb-3">
+                    <input value="{REFRESH_TOKEN}" id="input_refresh_token" type="text" class="form-control" placeholder="Refresh token" aria-label="Refresh token"
+                        aria-describedby="btn_refresh_token">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="btn_refresh_token">Copy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col-md-6">
+                <label for="input_error">Error:</label>
+                <div class="input-group mb-3">
+                    <input value="{ERROR}" id="input_error" type="text" class="form-control" placeholder="Error" aria-label="Error" aria-describedby="btn_error">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="btn_error">Copy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col-md-6">
+                <label for="input_devices">devices:</label>
+                <div class="input-group mb-3">
+                    <textarea id="input_devices" type="text" class="form-control" placeholder="devices" aria-label="devices" aria-describedby="btn_devices">{DEVICES}</textarea>
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="btn_devices">Copy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
