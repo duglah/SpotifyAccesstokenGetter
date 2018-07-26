@@ -103,7 +103,7 @@ function getDevices(token, callback) {
 }
 
 function parseFile(file, values, callback) {
-    fs.readFile('code.html', 'utf8', function (err, data) {
+    fs.readFile(file, 'utf8', function (err, data) {
         if (err) {
             callback(err);
             return;
@@ -121,6 +121,11 @@ app.listen(port, function () {
     console.log('Started at port %s!', port);
     console.log('Starting Browser...');
     var start = (process.platform == 'darwin' ? 'open' : process.platform == 'win32' ? 'start' : 'xdg-open');
-    require('child_process').exec(start + ' \'' + authUrl + '\'');
+    
+    if(process.platform == 'win32')
+        require('child_process').exec(start + ' \"\" \"' + authUrl + '\"');
+    else
+        require('child_process').exec(start + ' \'' + authUrl + '\'');
+        
     console.log('...done');
 });
