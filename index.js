@@ -121,6 +121,11 @@ app.listen(port, function () {
     console.log('Started at port %s!', port);
     console.log('Starting Browser...');
     var start = (process.platform == 'darwin' ? 'open' : process.platform == 'win32' ? 'start' : 'xdg-open');
-    require('child_process').exec(start + ' \'' + authUrl + '\'');
+    
+    if(process.platform == 'win32')
+        require('child_process').exec(start + ' \"\" \"' + authUrl + '\"');
+    else
+        require('child_process').exec(start + ' \'' + authUrl + '\'');
+        
     console.log('...done');
 });
