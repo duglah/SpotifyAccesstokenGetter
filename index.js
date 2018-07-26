@@ -103,7 +103,7 @@ function getDevices(token, callback) {
 }
 
 function parseFile(file, values, callback) {
-    fs.readFile('code.html', 'utf8', function (err, data) {
+    fs.readFile(file, 'utf8', function (err, data) {
         if (err) {
             callback(err);
             return;
